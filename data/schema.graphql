@@ -1,0 +1,89 @@
+type aaa {
+  createPlantField(input: NameOfCreateNewPlantasdfasdfInput!): NameOfCreateNewPlantasdfasdfPayload
+  createFeatureField(input: NameOfCreateNewFeatureasdfasdfInput!): NameOfCreateNewFeatureasdfasdfPayload
+  LetPlantArrayHasFeatureField(input: NameOfMutationOfLetPlantArrayHasFeatureasdfasdfInput!): NameOfMutationOfLetPlantArrayHasFeatureasdfasdfPayload
+  LetPlantHasFeatureArrayField(input: NameOfMutationOfLetPlantHasFeatureArrayasdfasdfInput!): NameOfMutationOfLetPlantHasFeatureArrayasdfasdfPayload
+}
+
+input NameOfCreateNewFeatureasdfasdfInput {
+  text: String!
+  clientMutationId: String!
+}
+
+type NameOfCreateNewFeatureasdfasdfPayload {
+  featureListFromMutationOutputFields: NameOfFeatureListType
+  clientMutationId: String!
+}
+
+input NameOfCreateNewPlantasdfasdfInput {
+  text: String!
+  clientMutationId: String!
+}
+
+type NameOfCreateNewPlantasdfasdfPayload {
+  plantListFromMutationOutputFields: NameOfPlantListType
+  clientMutationId: String!
+}
+
+type NameOfFeatureListType {
+  featureArray: [NameOfFeatureType]
+  id: String
+}
+
+type NameOfFeatureType {
+  id: ID
+  text: String
+}
+
+input NameOfMutationOfLetPlantArrayHasFeatureasdfasdfInput {
+  plantUUIDArray: [String]
+  featureUUID: String!
+  clientMutationId: String!
+}
+
+type NameOfMutationOfLetPlantArrayHasFeatureasdfasdfPayload {
+  relationshipListFromMutationOutputFields: NameOfRelationshipListType
+  clientMutationId: String!
+}
+
+input NameOfMutationOfLetPlantHasFeatureArrayasdfasdfInput {
+  plantUUID: String!
+  featureUUIDArray: [String]
+  clientMutationId: String!
+}
+
+type NameOfMutationOfLetPlantHasFeatureArrayasdfasdfPayload {
+  relationshipListFromMutationOutputFields: NameOfRelationshipListType
+  clientMutationId: String!
+}
+
+type NameOfPlantListType {
+  plantArray: [NameOfPlantType]
+  id: String
+}
+
+type NameOfPlantType {
+  id: ID
+  text: String
+}
+
+type NameOfRelationshipListType {
+  relationshipArray: [NameOfRelationshipType]
+  id: String
+}
+
+type NameOfRelationshipType {
+  plant: NameOfPlantType
+  id: ID
+  feature: NameOfFeatureType
+}
+
+type NameOfTaoTaoType {
+  forPlant: NameOfPlantListType
+  forFeature: NameOfFeatureListType
+  forRelationship: NameOfRelationshipListType
+}
+
+type QueryThatLigoudanWants {
+  TaoTaoFIeld: NameOfTaoTaoType
+}
