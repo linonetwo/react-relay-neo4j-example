@@ -19,6 +19,8 @@
 cd 到本项目目录下，然后运行
 > npm i
 > npm run start
+  
+然后打开 http://localhost:3010/ 就可以看到网站了
 
 #怎么理解这个应用
 从项目根目录下的 server.js 开始看，它引用了 ./js/app.js  
