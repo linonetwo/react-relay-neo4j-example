@@ -3,5 +3,5 @@ module.exports = {
     graphQLPort: 3011,
     neo4j: 'http://localhost:7474',
     neo4jUserName: 'neo4j',
-    neo4jPassWord: 'lkjhgfds',
+    neo4jPassWord: 'lkjhgfdsa',
   }
