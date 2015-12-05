@@ -1,7 +1,8 @@
 #这是啥
 
 一个用于整理各种植物的特征的工具，可以向列表中添加新植物和新特征：点击某种植物后，再点击几个特征，然后按右下角的按钮提交，就可以把植物特征信息变成 Neo4j 图论数据库中的节点和边，方便进一步分析。
-
+![](https://github.com/linonetwo/react-relay-neo4j-example/blob/master/screenshot.png)  
+![](https://github.com/linonetwo/react-relay-neo4j-example/blob/master/neo4jScreenshot.png)  
 #怎么运行
 首先默认你已经配置好了 node 。
 [下载 Neo4j 图论数据库](http://neo4j.com/download/)的社区版，neo4j-community 。
