@@ -64,7 +64,7 @@ Array.prototype.contains = function(obj) {
 // 		email: 'onetwo',
 // 	},
 // }			传递一个上面这样的 cypher query 进来，返回一个 Promise  ， 如果 cypher 返回false那会 reject ， 但有时候只返回空行，我们当做 CREATE 等指令执行完成
-function runCypher(cypherQuery, userName='neo4j', passWord='qwer1234') {
+function runCypher(cypherQuery, userName=config.neo4jUserName, passWord=config.neo4jPassWord) {
 	return new Promise(function (resolve, reject) {
 		var db = new neo4j.GraphDatabase({
 			url: config.neo4j,  // config.js 里写了 Neo4j 运行在哪里
