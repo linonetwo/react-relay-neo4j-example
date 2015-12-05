@@ -13,7 +13,6 @@ class RelationshipPanel extends React.Component {
 	render() {
 	var {relationshipArray} = this.props.relationshipFromRelay;
 	var groupedList = []; // 把同一个植物拥有的特征都放到一起
-
 	if(relationshipArray.length > 0) {
 		let tempPlant = relationshipArray[0].plant  // 第一个植物
 		let tempFeatureArray = [];
@@ -30,7 +29,7 @@ class RelationshipPanel extends React.Component {
 						featureArray: tempFeatureArray,
 					})
 					tempPlant = item.plant;
-					tempFeatureArray = [];
+					tempFeatureArray = [item.feature];
 				}
 			}
 		)
@@ -48,27 +47,23 @@ class RelationshipPanel extends React.Component {
 			<Card >
 			<CardText>
 			<List subheader="Relationship">
-				{
-					() => {
+				{groupedList.map(
+					item => {
 						if(relationshipArray.length > 0)
-						groupedList.map(
-							item => {
-								return <ListItem
-									leftAvatar={<Avatar style={{'color':'#689F38', 'backgroundColor': '#C5E1A5'}}>{item.plant.text.substring(0,1)}</Avatar>}
-									primaryText={item.plant.text}
-									secondaryText={
-										<p>
-											{item.featureArray.map(
-												singleFeature => singleFeature.text+' '
-											)}
-										</p>
-									}
-									key={item.plant.id}
-									/>
+						return <ListItem
+							leftAvatar={<Avatar style={{'color':'#689F38', 'backgroundColor': '#C5E1A5'}}>{item.plant.text.substring(0,1)}</Avatar>}
+							primaryText={item.plant.text}
+							secondaryText={
+								<p>
+									{item.featureArray.map(
+										singleFeature => singleFeature.text+' '
+									)}
+								</p>
 							}
-						)
+							key={item.plant.id}
+							/>
 					}
-				}
+				)}
 			</List>
 			</CardText>
 			</Card>
