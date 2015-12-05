@@ -25,10 +25,10 @@ cd 到本项目目录下，然后运行
 
 ./js/app.js 引用了 ./js/routes/TaoTaoRoute.js 和 ./js/components/TaoTao.js
 
-<TaoTao /> 是一个用于放 <FeaturePanel/> <PlantPanel/> 和 <RelationshipPanel/> 的容器，内有用于创建植物和特征之间关系的 Mutation 
+```<TaoTao />``` 是一个用于放 ```<FeaturePanel/>``` ```<PlantPanel/>``` 和 ```<RelationshipPanel/>``` 的容器，内有用于创建植物和特征之间关系的 Mutation 
   
 
-<FeaturePanel/> 和 <PlantPanel/> 差不多，都有用于向 Neo4j 中添加节点的 Mutation 
+```<FeaturePanel/>``` 和 ```<PlantPanel/>``` 差不多，都有用于向 Neo4j 中添加节点的 Mutation 
   
 以上 React 组件外都包有 Relay 容器，Relay 容器向后台请求数据，后台与之对应的端点在根目录下的 ./data/schema.js 中定义
 schema.js 引用了 ./data/database.js ，database.js 提供了与 Neo4j 数据库通信的函数，每个函数都返回一个 Promise 

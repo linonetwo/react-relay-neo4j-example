@@ -1,8 +1,8 @@
 {
-  "name": "Relay-Neo4j-example",
-  "private": true,
+  "name": "react-relay-neo4j-example",
+  "private": false,
   "description": "A try to cobble React-Relay and Graph Database Neo4j together",
-  "repository": "linonetwo/Relay-Neo4j-example",
+  "repository": "linonetwo/react-relay-neo4j-example",
   "version": "0.1.0",
   "scripts": {
     "start": "babel-node ./server.js",
