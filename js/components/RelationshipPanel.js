@@ -49,7 +49,7 @@ class RelationshipPanel extends React.Component {
 			<List subheader="Relationship">
 				{groupedList.map(
 					item => {
-						if(relationshipArray.length > 0)
+						if(groupedList.length > 0)
 						return <ListItem
 							leftAvatar={<Avatar style={{'color':'#689F38', 'backgroundColor': '#C5E1A5'}}>{item.plant.text.substring(0,1)}</Avatar>}
 							primaryText={item.plant.text}
